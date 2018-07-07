@@ -27,4 +27,4 @@ To uninstall the plugin, follow those steps:
 3. Delete the related folder from **PROJECT_FOLDER/addons/**
 7. WELL DONE !!! ~~You are free~~... Hum... The plugin is uninstalled
 
-PS: can @reduz, @Calinou and @akien-mga look at this repository and show it to others ? I need feedback. Maybe this plugin can be added to Godot.
+PS: Can @reduz, @Calinou, @akien-mga or any one else look at this repository and show it to others ? I really need feedbacks !

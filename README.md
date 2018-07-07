@@ -18,7 +18,7 @@ To use the plugin, follow those steps:
 3. In the dialog, **fill** all the required informations _in_ and click the **OK** button
 4. WELL DONE !!! You will find the generated scene in the specified destination
 
-_NB: If you check **Generate intermidiate scene**, a scene (*tscn) will be generated instead of a tileset (*.tres)_
+_NB: If you check **Generate intermediate scene**, a scene (\*.tscn) will be generated instead of a tileset (\*.tres)_
 
 ## Uninstallation
 To uninstall the plugin, follow those steps:

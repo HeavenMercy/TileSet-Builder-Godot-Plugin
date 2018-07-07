@@ -1,4 +1,4 @@
-# TileSet-Builder-Godot-Plugin
+# TileSet Builder (Godot Plugin)
 A Godot plugin that builds a *.tscn or *.tres tileset. You have to input: **Spritesheet Path**, **Tile Size**, **Offset** before the start of tiles, **Spacing** between tiles, **Destination** of the generated tileset.
 
 ## Installation

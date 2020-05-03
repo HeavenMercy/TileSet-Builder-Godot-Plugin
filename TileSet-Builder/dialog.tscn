@@ -1,568 +1,265 @@
-[gd_scene load_steps=2 format=1]
+[gd_scene load_steps=2 format=2]
 
 [ext_resource path="res://addons/TileSet-Builder/dialog.gd" type="Script" id=1]
 
 [node name="dialog" type="WindowDialog"]
-
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 0.0
-margin/top = 0.0
-margin/right = 371.0
-margin/bottom = 233.0
-popup/exclusive = false
-window/title = "Build TileSet"
-script/script = ExtResource( 1 )
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -164.0
+margin_top = -118.0
+margin_right = 164.0
+margin_bottom = 118.0
+window_title = "Build Tileset"
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="ss_file_dialog" type="FileDialog" parent="."]
-
-visibility/visible = false
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 7.0
-margin/top = 129.0
-margin/right = 397.0
-margin/bottom = 497.0
-popup/exclusive = true
-window/title = "Open a File"
-dialog/text = "Select a SpriteSheet for the TileSet
-"
-dialog/hide_on_ok = true
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -258.5
+margin_top = -178.5
+margin_right = 258.5
+margin_bottom = 178.5
+rect_min_size = Vector2( 150, 52.5 )
+size_flags_horizontal = 3
+size_flags_vertical = 3
+window_title = "Open a File"
 mode = 0
-access = 0
-filters = StringArray( "*.atex", "*.cube", "*.dds", "*.jpeg", "*.jpg", "*.ltex", "*.pkm", "*.png", "*.xtex", "*.pvr", "*.tex", "*.tres", "*.webp", "*.xatex", "*.xltex", "*.xml" )
-show_hidden_files = false
+filters = PoolStringArray( "*.atex", "*.cube", "*.dds", "*.jpeg", "*.jpg", "*.ltex", "*.pkm", "*.png", "*.xtex", "*.pvr", "*.tex", "*.tres", "*.webp", "*.xatex", "*.xltex", "*.xml" )
 
 [node name="dest_folder_dialog" type="FileDialog" parent="."]
-
-visibility/visible = false
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 7.0
-margin/top = 129.0
-margin/right = 397.0
-margin/bottom = 497.0
-popup/exclusive = true
-window/title = "Open a Directory"
-dialog/text = "Select a destination for the TileSet
-"
-dialog/hide_on_ok = true
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -237.5
+margin_top = -166.0
+margin_right = 237.5
+margin_bottom = 166.0
+rect_min_size = Vector2( 150, 52.5 )
+window_title = "Open a Directory"
 mode = 2
-access = 0
-filters = StringArray(  )
-show_hidden_files = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="vbox" type="VBoxContainer" parent="."]
-
-anchor/right = 1
-anchor/bottom = 1
-focus/ignore_mouse = false
-focus/stop_mouse = false
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 7.0
-margin/top = 7.0
-margin/right = 6.0
-margin/bottom = 11.0
-alignment = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 10.0
+margin_top = 10.0
+margin_right = -10.0
+margin_bottom = -10.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="ss_hbox" type="HBoxContainer" parent="vbox"]
-
-editor/display_folded = true
-focus/ignore_mouse = false
-focus/stop_mouse = false
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 0.0
-margin/top = 0.0
-margin/right = 358.0
-margin/bottom = 24.0
-alignment = 0
+margin_right = 308.0
+margin_bottom = 24.0
 
 [node name="Label" type="Label" parent="vbox/ss_hbox"]
-
-hint/tooltip = "The spritesheet left( and top"
-focus/ignore_mouse = true
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 0
-margin/left = 0.0
-margin/top = 5.0
-margin/right = 117.0
-margin/bottom = 19.0
+margin_top = 5.0
+margin_right = 117.0
+margin_bottom = 19.0
 text = "Spritesheet Path : "
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
 
 [node name="ss_path" type="LineEdit" parent="vbox/ss_hbox"]
-
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 3
-size_flags/vertical = 2
-margin/left = 121.0
-margin/top = 0.0
-margin/right = 291.0
-margin/bottom = 24.0
+margin_left = 121.0
+margin_right = 241.0
+margin_bottom = 24.0
+size_flags_horizontal = 3
 text = "res://"
-placeholder/alpha = 0.6
 editable = false
-focus_mode = 2
-caret/caret_blink = false
-caret/caret_blink_speed = 0.65
+context_menu_enabled = false
+shortcut_keys_enabled = false
+selecting_enabled = false
 
 [node name="ss_select_btn" type="Button" parent="vbox/ss_hbox"]
-
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 295.0
-margin/top = 0.0
-margin/right = 358.0
-margin/bottom = 24.0
-toggle_mode = false
+margin_left = 245.0
+margin_right = 308.0
+margin_bottom = 24.0
+focus_mode = 0
 enabled_focus_mode = 0
-shortcut = null
 text = "select..."
-flat = false
 
 [node name="HSeparator" type="HSeparator" parent="vbox"]
-
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 0.0
-margin/top = 28.0
-margin/right = 358.0
-margin/bottom = 31.0
+margin_top = 28.0
+margin_right = 308.0
+margin_bottom = 32.0
 
 [node name="tile_size_hbox" type="HBoxContainer" parent="vbox"]
-
-editor/display_folded = true
-focus/ignore_mouse = false
-focus/stop_mouse = false
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 0.0
-margin/top = 35.0
-margin/right = 358.0
-margin/bottom = 59.0
-alignment = 0
+margin_top = 36.0
+margin_right = 308.0
+margin_bottom = 60.0
 
 [node name="Label" type="Label" parent="vbox/tile_size_hbox"]
-
-hint/tooltip = "The left and top offset in the specified spritesheet"
-focus/ignore_mouse = true
-focus/stop_mouse = true
-size_flags/horizontal = 3
-size_flags/vertical = 0
-margin/left = 0.0
-margin/top = 5.0
-margin/right = 117.0
-margin/bottom = 19.0
-text = "Tile Size :"
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
+margin_top = 5.0
+margin_right = 67.0
+margin_bottom = 19.0
+size_flags_horizontal = 3
+text = "Tile Size"
 
 [node name="x_Label" type="Label" parent="vbox/tile_size_hbox"]
-
-focus/ignore_mouse = true
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 0
-margin/left = 121.0
-margin/top = 5.0
-margin/right = 160.0
-margin/bottom = 19.0
+margin_left = 71.0
+margin_top = 5.0
+margin_right = 110.0
+margin_bottom = 19.0
 text = "X Axis"
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
 
 [node name="x_SpinBox" type="SpinBox" parent="vbox/tile_size_hbox"]
-
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 164.0
-margin/top = 0.0
-margin/right = 238.0
-margin/bottom = 24.0
-range/min = 0.0
-range/max = 100.0
-range/step = 1.0
-range/page = 0.0
-range/value = 0.0
-range/exp_edit = false
-range/rounded = false
-editable = true
-prefix = ""
-suffix = ""
+margin_left = 114.0
+margin_right = 188.0
+margin_bottom = 24.0
+suffix = "px"
 
 [node name="y_Label" type="Label" parent="vbox/tile_size_hbox"]
-
-focus/ignore_mouse = true
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 0
-margin/left = 242.0
-margin/top = 5.0
-margin/right = 280.0
-margin/bottom = 19.0
+margin_left = 192.0
+margin_top = 5.0
+margin_right = 230.0
+margin_bottom = 19.0
 text = "Y Axis"
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
 
 [node name="y_SpinBox" type="SpinBox" parent="vbox/tile_size_hbox"]
-
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 284.0
-margin/top = 0.0
-margin/right = 358.0
-margin/bottom = 24.0
-range/min = 0.0
-range/max = 100.0
-range/step = 1.0
-range/page = 0.0
-range/value = 0.0
-range/exp_edit = false
-range/rounded = false
-editable = true
-prefix = ""
-suffix = ""
+margin_left = 234.0
+margin_right = 308.0
+margin_bottom = 24.0
+suffix = "px"
 
 [node name="offset_hbox" type="HBoxContainer" parent="vbox"]
-
-editor/display_folded = true
-focus/ignore_mouse = false
-focus/stop_mouse = false
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 0.0
-margin/top = 63.0
-margin/right = 358.0
-margin/bottom = 87.0
-alignment = 0
+margin_top = 64.0
+margin_right = 308.0
+margin_bottom = 88.0
 
 [node name="Label" type="Label" parent="vbox/offset_hbox"]
-
-hint/tooltip = "The left and top offset in the specified spritesheet"
-focus/ignore_mouse = true
-focus/stop_mouse = true
-size_flags/horizontal = 3
-size_flags/vertical = 0
-margin/left = 0.0
-margin/top = 5.0
-margin/right = 117.0
-margin/bottom = 19.0
-text = "Offset :"
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
+margin_top = 5.0
+margin_right = 67.0
+margin_bottom = 19.0
+size_flags_horizontal = 3
+text = "Offset"
 
 [node name="x_Label" type="Label" parent="vbox/offset_hbox"]
-
-focus/ignore_mouse = true
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 0
-margin/left = 121.0
-margin/top = 5.0
-margin/right = 160.0
-margin/bottom = 19.0
+margin_left = 71.0
+margin_top = 5.0
+margin_right = 110.0
+margin_bottom = 19.0
 text = "X Axis"
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
 
 [node name="x_SpinBox" type="SpinBox" parent="vbox/offset_hbox"]
-
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 164.0
-margin/top = 0.0
-margin/right = 238.0
-margin/bottom = 24.0
-range/min = 0.0
-range/max = 100.0
-range/step = 1.0
-range/page = 0.0
-range/value = 0.0
-range/exp_edit = false
-range/rounded = false
-editable = true
-prefix = ""
+margin_left = 114.0
+margin_right = 188.0
+margin_bottom = 24.0
 suffix = "px"
 
 [node name="y_Label" type="Label" parent="vbox/offset_hbox"]
-
-focus/ignore_mouse = true
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 0
-margin/left = 242.0
-margin/top = 5.0
-margin/right = 280.0
-margin/bottom = 19.0
+margin_left = 192.0
+margin_top = 5.0
+margin_right = 230.0
+margin_bottom = 19.0
 text = "Y Axis"
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
 
 [node name="y_SpinBox" type="SpinBox" parent="vbox/offset_hbox"]
-
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 284.0
-margin/top = 0.0
-margin/right = 358.0
-margin/bottom = 24.0
-range/min = 0.0
-range/max = 100.0
-range/step = 1.0
-range/page = 0.0
-range/value = 0.0
-range/exp_edit = false
-range/rounded = false
-editable = true
-prefix = ""
+margin_left = 234.0
+margin_right = 308.0
+margin_bottom = 24.0
 suffix = "px"
 
 [node name="spacing_hbox" type="HBoxContainer" parent="vbox"]
-
-editor/display_folded = true
-focus/ignore_mouse = false
-focus/stop_mouse = false
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 0.0
-margin/top = 91.0
-margin/right = 358.0
-margin/bottom = 115.0
-alignment = 0
+margin_top = 92.0
+margin_right = 308.0
+margin_bottom = 116.0
 
 [node name="Label" type="Label" parent="vbox/spacing_hbox"]
-
-hint/tooltip = "The left and top spacing in the specified spritesheet"
-focus/ignore_mouse = true
-focus/stop_mouse = true
-size_flags/horizontal = 3
-size_flags/vertical = 0
-margin/left = 0.0
-margin/top = 5.0
-margin/right = 117.0
-margin/bottom = 19.0
-text = "Spacing :"
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
+margin_top = 5.0
+margin_right = 67.0
+margin_bottom = 19.0
+size_flags_horizontal = 3
+text = "Spacing"
 
 [node name="x_Label" type="Label" parent="vbox/spacing_hbox"]
-
-focus/ignore_mouse = true
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 0
-margin/left = 121.0
-margin/top = 5.0
-margin/right = 160.0
-margin/bottom = 19.0
+margin_left = 71.0
+margin_top = 5.0
+margin_right = 110.0
+margin_bottom = 19.0
 text = "X Axis"
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
 
 [node name="x_SpinBox" type="SpinBox" parent="vbox/spacing_hbox"]
-
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 164.0
-margin/top = 0.0
-margin/right = 238.0
-margin/bottom = 24.0
-range/min = 0.0
-range/max = 100.0
-range/step = 1.0
-range/page = 0.0
-range/value = 0.0
-range/exp_edit = false
-range/rounded = false
-editable = true
-prefix = ""
+margin_left = 114.0
+margin_right = 188.0
+margin_bottom = 24.0
 suffix = "px"
 
 [node name="y_Label" type="Label" parent="vbox/spacing_hbox"]
-
-focus/ignore_mouse = true
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 0
-margin/left = 242.0
-margin/top = 5.0
-margin/right = 280.0
-margin/bottom = 19.0
+margin_left = 192.0
+margin_top = 5.0
+margin_right = 230.0
+margin_bottom = 19.0
 text = "Y Axis"
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
 
 [node name="y_SpinBox" type="SpinBox" parent="vbox/spacing_hbox"]
-
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 284.0
-margin/top = 0.0
-margin/right = 358.0
-margin/bottom = 24.0
-range/min = 0.0
-range/max = 100.0
-range/step = 1.0
-range/page = 0.0
-range/value = 0.0
-range/exp_edit = false
-range/rounded = false
-editable = true
-prefix = ""
+margin_left = 234.0
+margin_right = 308.0
+margin_bottom = 24.0
 suffix = "px"
 
 [node name="HSeparator1" type="HSeparator" parent="vbox"]
-
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 0.0
-margin/top = 119.0
-margin/right = 358.0
-margin/bottom = 122.0
+margin_top = 120.0
+margin_right = 308.0
+margin_bottom = 124.0
 
 [node name="dest_hbox" type="HBoxContainer" parent="vbox"]
-
-editor/display_folded = true
-focus/ignore_mouse = false
-focus/stop_mouse = false
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 0.0
-margin/top = 126.0
-margin/right = 358.0
-margin/bottom = 150.0
-alignment = 0
+margin_top = 128.0
+margin_right = 308.0
+margin_bottom = 152.0
 
 [node name="Label" type="Label" parent="vbox/dest_hbox"]
-
-hint/tooltip = "The spritesheet left( and top"
-focus/ignore_mouse = true
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 0
-margin/left = 0.0
-margin/top = 5.0
-margin/right = 82.0
-margin/bottom = 19.0
+margin_top = 5.0
+margin_right = 82.0
+margin_bottom = 19.0
 text = "Destination :"
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
 
 [node name="dest_path" type="LineEdit" parent="vbox/dest_hbox"]
-
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 3
-size_flags/vertical = 2
-margin/left = 86.0
-margin/top = 0.0
-margin/right = 291.0
-margin/bottom = 24.0
+margin_left = 86.0
+margin_right = 241.0
+margin_bottom = 24.0
+size_flags_horizontal = 3
 text = "res://"
-placeholder/alpha = 0.6
 editable = false
-focus_mode = 2
-caret/caret_blink = false
-caret/caret_blink_speed = 0.65
+context_menu_enabled = false
+shortcut_keys_enabled = false
+selecting_enabled = false
 
 [node name="dest_select_btn" type="Button" parent="vbox/dest_hbox"]
-
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 295.0
-margin/top = 0.0
-margin/right = 358.0
-margin/bottom = 24.0
-toggle_mode = false
+margin_left = 245.0
+margin_right = 308.0
+margin_bottom = 24.0
+focus_mode = 0
 enabled_focus_mode = 0
-shortcut = null
 text = "select..."
-flat = false
 
 [node name="gene_scn_CheckBox" type="CheckBox" parent="vbox"]
-
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 0.0
-margin/top = 154.0
-margin/right = 358.0
-margin/bottom = 177.0
-toggle_mode = true
+margin_top = 156.0
+margin_right = 308.0
+margin_bottom = 180.0
+focus_mode = 0
 enabled_focus_mode = 0
-shortcut = null
 text = "Generate intermediate scene"
-flat = false
-align = 0
 
 [node name="HSeparator2" type="HSeparator" parent="vbox"]
-
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 0.0
-margin/top = 181.0
-margin/right = 358.0
-margin/bottom = 184.0
+margin_top = 184.0
+margin_right = 308.0
+margin_bottom = 188.0
 
 [node name="submit_btn" type="Button" parent="vbox"]
-
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 0.0
-margin/top = 188.0
-margin/right = 358.0
-margin/bottom = 208.0
-toggle_mode = false
+margin_top = 192.0
+margin_right = 308.0
+margin_bottom = 212.0
+focus_mode = 0
 enabled_focus_mode = 0
-shortcut = null
 text = "OK"
-flat = false
-
-

@@ -32,5 +32,8 @@ func _on_submit_btn_pressed():
 		Vector2( x_ts_spin.get_value(), y_ts_spin.get_value() ),
 		Vector2( x_o_spin.get_value(), y_o_spin.get_value() ),
 		Vector2( x_s_spin.get_value(), y_s_spin.get_value() ),
-		dest_path.get_text(), get_node("vbox/gene_scn_CheckBox").is_pressed() )
+		dest_path.get_text(),
+
+		get_node("vbox/gene_scn_CheckBox").is_pressed() )
+
 	hide()

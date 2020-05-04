@@ -1,4 +1,7 @@
 # TileSet Builder (Godot 3.x Plugin)
+
+for the version for Godot 2.x: [Click here](https://github.com/HeavenMercy/TileSet-Builder-Godot-Plugin/tree/godot_2)
+
 A Godot plugin that builds a *.tscn (scene before tileset) or *.tres (tileset directly). You have to input those informations: **Spritesheet Path**, **Tile Size**, **Offset** (mpadding of the spritesheet), **Spacing** between tiles, **Destination** of the generated tileset.
 
 ## Installation

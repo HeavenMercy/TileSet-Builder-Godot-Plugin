@@ -15,6 +15,11 @@ To install the plugin, follow those steps:
 7. WELL DONE !!! The plugin is installed
 
 ## Usage
+
+![button to open the dialog](./TileSet-Builder/images/start.png)
+
+![dialog to generate tileset](./TileSet-Builder/images/window.png)
+
 To use the plugin, follow those steps:
 1. Open the **2D** view
 2. Click the **Build Tileset** button on the _editor toolbar_

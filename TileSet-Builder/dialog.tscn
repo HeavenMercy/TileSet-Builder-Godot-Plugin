@@ -3,19 +3,244 @@
 [ext_resource path="res://addons/TileSet-Builder/dialog.gd" type="Script" id=1]
 
 [node name="dialog" type="WindowDialog"]
+visible = true
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -164.0
-margin_top = -118.0
-margin_right = 164.0
-margin_bottom = 118.0
+margin_left = -173.0
+margin_top = -129.0
+margin_right = 156.0
+margin_bottom = 104.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
 window_title = "Build Tileset"
 script = ExtResource( 1 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
+
+[node name="vbox" type="VBoxContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 10.0
+margin_top = 10.0
+margin_right = -10.0
+margin_bottom = -10.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="HSeparator" type="HSeparator" parent="vbox"]
+margin_right = 309.0
+margin_bottom = 4.0
+size_flags_vertical = 3
+
+[node name="ss_hbox" type="HBoxContainer" parent="vbox"]
+margin_top = 8.0
+margin_right = 309.0
+margin_bottom = 32.0
+size_flags_horizontal = 3
+
+[node name="Label" type="Label" parent="vbox/ss_hbox"]
+margin_top = 5.0
+margin_right = 117.0
+margin_bottom = 19.0
+text = "Spritesheet Path : "
+
+[node name="ss_path" type="LineEdit" parent="vbox/ss_hbox"]
+margin_left = 121.0
+margin_right = 242.0
+margin_bottom = 24.0
+size_flags_horizontal = 3
+text = "res://"
+editable = false
+context_menu_enabled = false
+shortcut_keys_enabled = false
+selecting_enabled = false
+
+[node name="ss_select_btn" type="Button" parent="vbox/ss_hbox"]
+margin_left = 246.0
+margin_right = 309.0
+margin_bottom = 24.0
+focus_mode = 0
+enabled_focus_mode = 0
+text = "select..."
+
+[node name="HSeparator2" type="HSeparator" parent="vbox"]
+margin_top = 36.0
+margin_right = 309.0
+margin_bottom = 40.0
+
+[node name="tile_size_hbox" type="HBoxContainer" parent="vbox"]
+margin_top = 44.0
+margin_right = 309.0
+margin_bottom = 68.0
+size_flags_horizontal = 3
+
+[node name="Label" type="Label" parent="vbox/tile_size_hbox"]
+margin_top = 5.0
+margin_right = 68.0
+margin_bottom = 19.0
+size_flags_horizontal = 3
+text = "Tile Size"
+
+[node name="x_Label" type="Label" parent="vbox/tile_size_hbox"]
+margin_left = 72.0
+margin_top = 5.0
+margin_right = 111.0
+margin_bottom = 19.0
+text = "X Axis"
+
+[node name="x_SpinBox" type="SpinBox" parent="vbox/tile_size_hbox"]
+margin_left = 115.0
+margin_right = 189.0
+margin_bottom = 24.0
+suffix = "px"
+
+[node name="y_Label" type="Label" parent="vbox/tile_size_hbox"]
+margin_left = 193.0
+margin_top = 5.0
+margin_right = 231.0
+margin_bottom = 19.0
+text = "Y Axis"
+
+[node name="y_SpinBox" type="SpinBox" parent="vbox/tile_size_hbox"]
+margin_left = 235.0
+margin_right = 309.0
+margin_bottom = 24.0
+suffix = "px"
+
+[node name="offset_hbox" type="HBoxContainer" parent="vbox"]
+margin_top = 72.0
+margin_right = 309.0
+margin_bottom = 96.0
+size_flags_horizontal = 3
+
+[node name="Label" type="Label" parent="vbox/offset_hbox"]
+margin_top = 5.0
+margin_right = 68.0
+margin_bottom = 19.0
+size_flags_horizontal = 3
+text = "Offset"
+
+[node name="x_Label" type="Label" parent="vbox/offset_hbox"]
+margin_left = 72.0
+margin_top = 5.0
+margin_right = 111.0
+margin_bottom = 19.0
+text = "X Axis"
+
+[node name="x_SpinBox" type="SpinBox" parent="vbox/offset_hbox"]
+margin_left = 115.0
+margin_right = 189.0
+margin_bottom = 24.0
+suffix = "px"
+
+[node name="y_Label" type="Label" parent="vbox/offset_hbox"]
+margin_left = 193.0
+margin_top = 5.0
+margin_right = 231.0
+margin_bottom = 19.0
+text = "Y Axis"
+
+[node name="y_SpinBox" type="SpinBox" parent="vbox/offset_hbox"]
+margin_left = 235.0
+margin_right = 309.0
+margin_bottom = 24.0
+suffix = "px"
+
+[node name="spacing_hbox" type="HBoxContainer" parent="vbox"]
+margin_top = 100.0
+margin_right = 309.0
+margin_bottom = 124.0
+size_flags_horizontal = 3
+
+[node name="Label" type="Label" parent="vbox/spacing_hbox"]
+margin_top = 5.0
+margin_right = 68.0
+margin_bottom = 19.0
+size_flags_horizontal = 3
+text = "Spacing"
+
+[node name="x_Label" type="Label" parent="vbox/spacing_hbox"]
+margin_left = 72.0
+margin_top = 5.0
+margin_right = 111.0
+margin_bottom = 19.0
+text = "X Axis"
+
+[node name="x_SpinBox" type="SpinBox" parent="vbox/spacing_hbox"]
+margin_left = 115.0
+margin_right = 189.0
+margin_bottom = 24.0
+suffix = "px"
+
+[node name="y_Label" type="Label" parent="vbox/spacing_hbox"]
+margin_left = 193.0
+margin_top = 5.0
+margin_right = 231.0
+margin_bottom = 19.0
+text = "Y Axis"
+
+[node name="y_SpinBox" type="SpinBox" parent="vbox/spacing_hbox"]
+margin_left = 235.0
+margin_right = 309.0
+margin_bottom = 24.0
+suffix = "px"
+
+[node name="HSeparator1" type="HSeparator" parent="vbox"]
+margin_top = 128.0
+margin_right = 309.0
+margin_bottom = 132.0
+
+[node name="dest_hbox" type="HBoxContainer" parent="vbox"]
+margin_top = 136.0
+margin_right = 309.0
+margin_bottom = 160.0
+
+[node name="Label" type="Label" parent="vbox/dest_hbox"]
+margin_top = 5.0
+margin_right = 82.0
+margin_bottom = 19.0
+text = "Destination :"
+
+[node name="dest_path" type="LineEdit" parent="vbox/dest_hbox"]
+margin_left = 86.0
+margin_right = 242.0
+margin_bottom = 24.0
+size_flags_horizontal = 3
+text = "res://"
+editable = false
+context_menu_enabled = false
+shortcut_keys_enabled = false
+selecting_enabled = false
+
+[node name="dest_select_btn" type="Button" parent="vbox/dest_hbox"]
+margin_left = 246.0
+margin_right = 309.0
+margin_bottom = 24.0
+focus_mode = 0
+enabled_focus_mode = 0
+text = "select..."
+
+[node name="gene_scn_CheckBox" type="CheckBox" parent="vbox"]
+margin_top = 164.0
+margin_right = 309.0
+margin_bottom = 188.0
+focus_mode = 0
+enabled_focus_mode = 0
+text = "Generate intermediate scene"
+
+[node name="HSeparator3" type="HSeparator" parent="vbox"]
+margin_top = 192.0
+margin_right = 309.0
+margin_bottom = 196.0
+size_flags_vertical = 3
+
+[node name="submit_btn" type="Button" parent="vbox"]
+margin_top = 200.0
+margin_right = 309.0
+margin_bottom = 220.0
+focus_mode = 0
+enabled_focus_mode = 0
+text = "OK"
 
 [node name="ss_file_dialog" type="FileDialog" parent="."]
 anchor_left = 0.5
@@ -48,218 +273,3 @@ mode = 2
 __meta__ = {
 "_edit_use_anchors_": false
 }
-
-[node name="vbox" type="VBoxContainer" parent="."]
-anchor_right = 1.0
-anchor_bottom = 1.0
-margin_left = 10.0
-margin_top = 10.0
-margin_right = -10.0
-margin_bottom = -10.0
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="ss_hbox" type="HBoxContainer" parent="vbox"]
-margin_right = 308.0
-margin_bottom = 24.0
-
-[node name="Label" type="Label" parent="vbox/ss_hbox"]
-margin_top = 5.0
-margin_right = 117.0
-margin_bottom = 19.0
-text = "Spritesheet Path : "
-
-[node name="ss_path" type="LineEdit" parent="vbox/ss_hbox"]
-margin_left = 121.0
-margin_right = 241.0
-margin_bottom = 24.0
-size_flags_horizontal = 3
-text = "res://"
-editable = false
-context_menu_enabled = false
-shortcut_keys_enabled = false
-selecting_enabled = false
-
-[node name="ss_select_btn" type="Button" parent="vbox/ss_hbox"]
-margin_left = 245.0
-margin_right = 308.0
-margin_bottom = 24.0
-focus_mode = 0
-enabled_focus_mode = 0
-text = "select..."
-
-[node name="HSeparator" type="HSeparator" parent="vbox"]
-margin_top = 28.0
-margin_right = 308.0
-margin_bottom = 32.0
-
-[node name="tile_size_hbox" type="HBoxContainer" parent="vbox"]
-margin_top = 36.0
-margin_right = 308.0
-margin_bottom = 60.0
-
-[node name="Label" type="Label" parent="vbox/tile_size_hbox"]
-margin_top = 5.0
-margin_right = 67.0
-margin_bottom = 19.0
-size_flags_horizontal = 3
-text = "Tile Size"
-
-[node name="x_Label" type="Label" parent="vbox/tile_size_hbox"]
-margin_left = 71.0
-margin_top = 5.0
-margin_right = 110.0
-margin_bottom = 19.0
-text = "X Axis"
-
-[node name="x_SpinBox" type="SpinBox" parent="vbox/tile_size_hbox"]
-margin_left = 114.0
-margin_right = 188.0
-margin_bottom = 24.0
-suffix = "px"
-
-[node name="y_Label" type="Label" parent="vbox/tile_size_hbox"]
-margin_left = 192.0
-margin_top = 5.0
-margin_right = 230.0
-margin_bottom = 19.0
-text = "Y Axis"
-
-[node name="y_SpinBox" type="SpinBox" parent="vbox/tile_size_hbox"]
-margin_left = 234.0
-margin_right = 308.0
-margin_bottom = 24.0
-suffix = "px"
-
-[node name="offset_hbox" type="HBoxContainer" parent="vbox"]
-margin_top = 64.0
-margin_right = 308.0
-margin_bottom = 88.0
-
-[node name="Label" type="Label" parent="vbox/offset_hbox"]
-margin_top = 5.0
-margin_right = 67.0
-margin_bottom = 19.0
-size_flags_horizontal = 3
-text = "Offset"
-
-[node name="x_Label" type="Label" parent="vbox/offset_hbox"]
-margin_left = 71.0
-margin_top = 5.0
-margin_right = 110.0
-margin_bottom = 19.0
-text = "X Axis"
-
-[node name="x_SpinBox" type="SpinBox" parent="vbox/offset_hbox"]
-margin_left = 114.0
-margin_right = 188.0
-margin_bottom = 24.0
-suffix = "px"
-
-[node name="y_Label" type="Label" parent="vbox/offset_hbox"]
-margin_left = 192.0
-margin_top = 5.0
-margin_right = 230.0
-margin_bottom = 19.0
-text = "Y Axis"
-
-[node name="y_SpinBox" type="SpinBox" parent="vbox/offset_hbox"]
-margin_left = 234.0
-margin_right = 308.0
-margin_bottom = 24.0
-suffix = "px"
-
-[node name="spacing_hbox" type="HBoxContainer" parent="vbox"]
-margin_top = 92.0
-margin_right = 308.0
-margin_bottom = 116.0
-
-[node name="Label" type="Label" parent="vbox/spacing_hbox"]
-margin_top = 5.0
-margin_right = 67.0
-margin_bottom = 19.0
-size_flags_horizontal = 3
-text = "Spacing"
-
-[node name="x_Label" type="Label" parent="vbox/spacing_hbox"]
-margin_left = 71.0
-margin_top = 5.0
-margin_right = 110.0
-margin_bottom = 19.0
-text = "X Axis"
-
-[node name="x_SpinBox" type="SpinBox" parent="vbox/spacing_hbox"]
-margin_left = 114.0
-margin_right = 188.0
-margin_bottom = 24.0
-suffix = "px"
-
-[node name="y_Label" type="Label" parent="vbox/spacing_hbox"]
-margin_left = 192.0
-margin_top = 5.0
-margin_right = 230.0
-margin_bottom = 19.0
-text = "Y Axis"
-
-[node name="y_SpinBox" type="SpinBox" parent="vbox/spacing_hbox"]
-margin_left = 234.0
-margin_right = 308.0
-margin_bottom = 24.0
-suffix = "px"
-
-[node name="HSeparator1" type="HSeparator" parent="vbox"]
-margin_top = 120.0
-margin_right = 308.0
-margin_bottom = 124.0
-
-[node name="dest_hbox" type="HBoxContainer" parent="vbox"]
-margin_top = 128.0
-margin_right = 308.0
-margin_bottom = 152.0
-
-[node name="Label" type="Label" parent="vbox/dest_hbox"]
-margin_top = 5.0
-margin_right = 82.0
-margin_bottom = 19.0
-text = "Destination :"
-
-[node name="dest_path" type="LineEdit" parent="vbox/dest_hbox"]
-margin_left = 86.0
-margin_right = 241.0
-margin_bottom = 24.0
-size_flags_horizontal = 3
-text = "res://"
-editable = false
-context_menu_enabled = false
-shortcut_keys_enabled = false
-selecting_enabled = false
-
-[node name="dest_select_btn" type="Button" parent="vbox/dest_hbox"]
-margin_left = 245.0
-margin_right = 308.0
-margin_bottom = 24.0
-focus_mode = 0
-enabled_focus_mode = 0
-text = "select..."
-
-[node name="gene_scn_CheckBox" type="CheckBox" parent="vbox"]
-margin_top = 156.0
-margin_right = 308.0
-margin_bottom = 180.0
-focus_mode = 0
-enabled_focus_mode = 0
-text = "Generate intermediate scene"
-
-[node name="HSeparator2" type="HSeparator" parent="vbox"]
-margin_top = 184.0
-margin_right = 308.0
-margin_bottom = 188.0
-
-[node name="submit_btn" type="Button" parent="vbox"]
-margin_top = 192.0
-margin_right = 308.0
-margin_bottom = 212.0
-focus_mode = 0
-enabled_focus_mode = 0
-text = "OK"

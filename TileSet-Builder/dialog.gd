@@ -21,19 +21,19 @@ onready var gene_scn_CheckBox = get_node("vbox/gene_scn_CheckBox")
 signal tileset_data_provided( texture_path, tile_size, offset, spacing, destination, scene_only )
 
 func _ready():
-	ss_select_btn.connect( "pressed", ss_file_dialog, "popup_centered" )
-	dest_select_btn.connect( "pressed", dest_folder_dialog, "popup_centered" )
-	submit_btn.connect( "pressed", self, "_on_submit_btn_pressed" )
-	ss_file_dialog.connect( "file_selected", ss_path, "set_text" )
-	dest_folder_dialog.connect( "dir_selected", dest_path, "set_text" )
+    ss_select_btn.connect( "pressed", ss_file_dialog, "popup_centered" )
+    dest_select_btn.connect( "pressed", dest_folder_dialog, "popup_centered" )
+    submit_btn.connect( "pressed", self, "_on_submit_btn_pressed" )
+    ss_file_dialog.connect( "file_selected", ss_path, "set_text" )
+    dest_folder_dialog.connect( "dir_selected", dest_path, "set_text" )
 
 func _on_submit_btn_pressed():
-	emit_signal( "tileset_data_provided", ss_path.get_text(),
-		Vector2( x_ts_spin.get_value(), y_ts_spin.get_value() ),
-		Vector2( x_o_spin.get_value(), y_o_spin.get_value() ),
-		Vector2( x_s_spin.get_value(), y_s_spin.get_value() ),
-		dest_path.get_text(),
+    emit_signal( "tileset_data_provided", ss_path.get_text(),
+        Vector2( x_ts_spin.get_value(), y_ts_spin.get_value() ),
+        Vector2( x_o_spin.get_value(), y_o_spin.get_value() ),
+        Vector2( x_s_spin.get_value(), y_s_spin.get_value() ),
+        dest_path.get_text(),
 
-		get_node("vbox/gene_scn_CheckBox").is_pressed() )
+        get_node("vbox/gene_scn_CheckBox").is_pressed() )
 
-	hide()
+    hide()
